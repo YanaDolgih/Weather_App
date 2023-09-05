@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ dom.name }}
+{% endblock %}
+
+
+{% block body %}
+    <hr class="featurette-divider">
+    <h1>{{ dom.name }}</h1>
+    <div class="alert alert-info">
+        <p>{{ dom.info }}</p>
+        <p><b>Data: {{ dom.date.date() }}</b></p>
+        <a href="/posts/{{ dom.id }}/update" class="btn btn-warning">Edit</a>
+        <a href="/posts/{{ dom.id }}/delete" class="btn btn-warning">Delete</a>
+    </div>
+    <hr class="featurette-divider">
+
+{% endblock %}

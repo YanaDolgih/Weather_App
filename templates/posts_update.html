@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Update
+{% endblock %}
+
+{% block body %}
+<hr class="featurette-divider">
+    <hr class="featurette-divider">
+    <h1>Update</h1>
+    <hr class="featurette-divider">
+    <form method="post">
+        <input type="text" name="name" id="name" class="container form-control" value="{{ dom.name }}" placeholder="Enter the product name:"><br>
+        <textarea name="info" id="info" class="container form-control" placeholder="Enter the quantity:">{{ dom.info }} </textarea><br>
+        <textarea name="description" id="description" class="container form-control" placeholder="Enter a description:">{{ dom.description }}</textarea><br>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <input type="submit" class="btn btn-sussess" value="Update">
+        </div>
+    </form>
+{% endblock %}

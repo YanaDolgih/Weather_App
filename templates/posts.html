@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All products
+{% endblock %}
+
+
+{% block body %}
+    <hr class="featurette-divider">
+    <h1>The products you were looking for.</h1>
+    <hr class="featurette-divider">
+
+{% if dom|length > 0 %}
+    {% for el in dom %}
+    <div class="container">
+        <div class="alert-alert info">
+            <h4>{{ el.name }}</h4>
+            <p>Information: {{ el.info }}</p>
+            <p>Description: {{ el.description }}</p>
+            <p><b>Data: {{ el.date.date() }}</b></p>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">More detailed</a>
+        </div>
+        <hr class="featurette-divider">
+    </div>
+    {% endfor %}
+{% else %}
+<p> You haven't added any products. </p>
+{% endif %}
+
+{% endblock %}

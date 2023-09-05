@@ -1,0 +1,12 @@
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+body{
+    background: Silver;
+    margin-top: 30px;
+}
+footer{
+    background: LightGray;
+}
